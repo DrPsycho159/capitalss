@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Capital - Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="login-container">
+    <div class="login-box">
+      <img src="capitallogo.jpg" alt="Logo" class="logo-login" />
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Usuario" id="usuario" required />
+        <input type="password" placeholder="Contraseña" id="clave" required />
+        <button type="submit">Ingresar</button>
+      </form>
+      <p id="error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- PANEL PRINCIPAL -->
+  <div id="panel" style="display: none;">
+    <header>
+      <div class="left">
+        <button id="listaBtn">📋 Lista de Hamburguesas</button>
+      </div>
+      <div class="center">LA CAPITAL</div>
+      <div class="right">
+        <button id="cerrarSesionBtn">Cerrar Sesión</button>
+      </div>
+    </header>
+
+    <section class="agregar">
+      <button id="agregarBtn">+ Agregar Hamburguesa</button>
+    </section>
+
+    <section id="formulario-container" style="display: none;">
+      <form id="formHamburguesa">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <textarea name="descripcion" placeholder="Descripción" required></textarea>
+        <textarea name="ingredientes" placeholder="Ingredientes" required></textarea>
+        <textarea name="preparacion" placeholder="Preparación" required></textarea>
+        <input type="file" name="foto" accept="image/*" />
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section id="lista-hamburguesas">
+      <!-- Aquí se mostrarán las hamburguesas -->
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: black;
+  color: #ffcc04;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+header button {
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background-color: #ffcc04;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+header button:hover {
+  background-color: #ffcc04;
+  transform: scale(1.05);
+}
+
+
+/* Botón agregar */
+.agregar {
+  background-color: #ffcc04;
+  text-align: center;
+  padding: 15px;
+}
+
+.agregar button {
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: #ffcc04;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.agregar button:hover {
+  background-color: #222;
+}
+
+/* Formulario */
+#formulario-container {
+  padding: 30px;
+  background: #fff8dc;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#formulario-container input,
+#formulario-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#formulario-container button {
+  background: black;
+  color: #ffcc04;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#formulario-container button:hover {
+  background: #222;
+}
+
+/* Tarjetas hamburguesas */
+.hamburguesa {
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #fff8dc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info {
+  flex: 2;
+  min-width: 200px;
+    padding: 10px 0;
+}
+
+.foto {
+  margin-left: 20px;
+}
+
+.foto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.no-foto {
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+}
+
+.editar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.editar button {
+  background-color: #ffcc04;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.editar button:hover {
+  background-color: #ffcc04;
+}
+
+/* Login */
+#login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFD100;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 320px;
+}
+
+.logo-login {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  margin-bottom: 0px;
+  color: #222;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-box button {
+  background-color: #FFD100;
+  border: none;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #e6bd00;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.center {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 12px;
+  padding: 10px 20px;
+  background-color: #FFD100;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.hamburguesa h3 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #111;
+  margin-top: 0;       /* ❗ Elimina espacio arriba */
+  margin-bottom: 0px;  /* ❗ Reduce el espacio abajo */
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #ddd;
+}
+
+.info p {
+  margin: 8px 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.info p strong {
+  color: #222;
+  font-weight: 600;
+}
+.hamburguesa:hover {
+  background-color: #fff1c1;
+  transition: background-color 0.3s ease;
+}
+.hamburguesa:nth-child(even) {
+  background-color: #fff2b8;
+}
+@media (max-width: 768px) {
+  .hamburguesa {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto {
+    margin: 20px 0;
+  }
+
+  .editar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 0;
+  }
+
+  .foto img,
+  .no-foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hamburguesa h3 {
+    font-size: 28px;
+    
+  }
+
+  .info p {
+    font-size: 18px;
+  }
+}
