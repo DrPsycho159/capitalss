@@ -44,7 +44,6 @@ header button:hover {
   transform: scale(1.05);
 }
 
-
 /* Botón agregar */
 .agregar {
   background-color: #ffcc04;
@@ -52,21 +51,6 @@ header button:hover {
   padding: 15px;
 }
 
-.agregar button {
-  font-size: 16px;
-  padding: 12px 24px;
-  margin: 5px;
-  border-radius: 10px;
-  border: none;
-  background-color: black;
-  color: #ffcc04;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.agregar button:hover {
-  background-color: #222;
-}
 
 /* Formulario */
 #formulario-container {
@@ -89,18 +73,27 @@ header button:hover {
   font-size: 16px;
 }
 
+/*esto modifica el boton de guardar del formulario*/
 #formulario-container button {
   background: black;
   color: #ffcc04;
   font-weight: bold;
-  padding: 12px 24px;
+  font-size: 22px;
+  padding: 20px 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto 0;
+  display: block;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #formulario-container button:hover {
   background: #222;
+  transform: translateY(-2px);
 }
 
 /* Tarjetas hamburguesas */
@@ -117,22 +110,83 @@ header button:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.hamburguesa {
+  position: relative;
+}
+
+.numero {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 80px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.hamburguesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff8dc;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex: 1;
+}
+
+.numero {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
 .info {
   flex: 2;
   min-width: 200px;
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .foto {
   margin-left: 20px;
 }
-
 .foto img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #333;
+}
+/* NUEVO: Bloque de botones aparte */
+.editar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-left: 2px solid #ccc;
+  min-width: 140px;
 }
 
 .no-foto {
@@ -150,23 +204,28 @@ header button:hover {
 .editar {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-left: 20px;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #ffcc04;
+  padding: 20px 10px;
+  border-radius: 12px;
+  min-width: 120px;
+  align-items: stretch;
+  justify-content: center;
 }
-
 .editar button {
   background-color: #ffcc04;
   color: black;
   border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.3s ease;
 }
 
 .editar button:hover {
-  background-color: #ffcc04;
+  background-color: #ffe164;
 }
 
 /* Login */
@@ -300,4 +359,121 @@ header button:hover {
   .info p {
     font-size: 18px;
   }
+}
+/*esto es el estilo del boton agregar hamburguesa*/
+.card-button { 
+  background-color: #fff8dc;
+  color: black;
+  padding: 30px 40px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.card-button:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+  background-color: #ffeaaa;
+}
+.hamburguesa {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/* TARJETA hasta la foto */
+.tarjeta {
+  background-color: #fff8dc;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+/* Número */
+.numero {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffcc04;
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+/* Info */
+.info {
+  flex: 2;
+  min-width: 200px;
+}
+
+/* Foto */
+.foto {
+  margin-left: 20px;
+}
+
+.foto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+/* BOTONES en tarjeta separada */
+.botones {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: fit-content;
+}
+.botones button {
+  padding: 20px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón Editar */
+.botones button:first-child {
+  background-color: #007bff;
+}
+
+.botones button:first-child:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Botón Eliminar */
+.botones button:last-child {
+  background-color: #dc3545;
+}
+
+.botones button:last-child:hover {
+  background-color: #a71d2a;
+  transform: scale(1.05);
 }
