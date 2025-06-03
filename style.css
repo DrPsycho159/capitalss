@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+  background-color: #413f3f;
   color: #333;
 }
 
@@ -98,7 +98,7 @@ header button:hover {
 
 /* Tarjetas hamburguesas */
 .hamburguesa {
-  border: 2px solid black;
+  border: 5px solid black;
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -365,7 +365,7 @@ header button:hover {
   background-color: #fff8dc;
   color: black;
   padding: 30px 40px;
-  font-size: 28px;
+  font-size: 45px;
   font-weight: bold;
   border: none;
   border-radius: 24px;
@@ -374,7 +374,7 @@ header button:hover {
   cursor: pointer;
   display: block;
   width: 90%;
-  max-width: 700px;
+  max-width: 1200px;
   margin: 30px auto;
   text-align: center;
 }
@@ -385,21 +385,27 @@ header button:hover {
   background-color: #ffeaaa;
 }
 .hamburguesa {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin: 20px;
+  gap: 10px;                  /* antes: 20px */
+  margin: 10px auto;          /* menos espacio entre tarjetas */
+  padding: 10px;              /* opcional: para más compresión */
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffeaaa;
+  max-width: 1100px;           /* ✅ limitar el ancho total */
 }
-
 /* TARJETA hasta la foto */
 .tarjeta {
   background-color: #fff8dc;
   border-radius: 15px;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  flex: 1;
+  max-width: 700px;     /* 🔧 más pequeño */
+  width: 100%;          /* ✅ ocupa el ancho disponible hasta el max-width */
+  margin: 20px auto;
+  align-items: center;
+  gap: 20px;             /* agrega separación entre hijos */
 }
 
 /* Número */
@@ -420,7 +426,7 @@ header button:hover {
 /* Info */
 .info {
   flex: 2;
-  min-width: 200px;
+  min-width: 50px;
 }
 
 /* Foto */
@@ -438,11 +444,12 @@ header button:hover {
 
 /* BOTONES en tarjeta separada */
 .botones {
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
+   align-self: flex-start;  /* ✅ asegura que se centre verticalmente respecto a la foto */
   flex-direction: column;
   gap: 40px;
   height: fit-content;
@@ -454,17 +461,17 @@ header button:hover {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: #ffcc04;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Botón Editar */
 .botones button:first-child {
-  background-color: #007bff;
+  background-color: #000000;
 }
 
 .botones button:first-child:hover {
-  background-color: #0056b3;
+  background-color: #000000;
   transform: scale(1.05);
 }
 
